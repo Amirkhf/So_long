@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 13:10:42 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/01 13:24:32 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/02 13:36:12 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/include.h"
+#include "../../includes/include.h"
 
 char	**read_map(char *str, char **map)
 {

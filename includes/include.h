@@ -1,6 +1,7 @@
 #ifndef INCLUDE_H
 # define INCLUDE_H
 
+# include "../minilibx-linux/mlx.h"
 # include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -17,10 +18,19 @@ typedef struct s_count
 
 typedef struct s_images
 {
+	int		x;
+	int		y;
+	int		i;
+	int		j;
+	int		width;
+	int		height;
 	void	*Wall;
 	void	*player;
 	void	*ground;
-	void	*collectable;
+	void	*collectible;
+	void	*exit;
+	void	*mlx;
+	void	*mlx_win;
 }			t_images;
 
 typedef struct s_position
@@ -28,6 +38,13 @@ typedef struct s_position
 	int		y;
 	int		x;
 }			t_position;
+void		draw_pieces(t_images *data, char **map);
+void		draw_player(t_images *data, char **map);
+void		draw_ground(t_images *data, char **map);
+void		draw_map(t_images *data, char **map);
+void		draw_exit(t_images *data, char **map);
+void		draw_wall(t_images *data, char **map);
+void		struct_play(t_images *data);
 int			nb_ligne(char **map);
 int			verif_path(char **map);
 void		dfs(char **map, int x, int y);

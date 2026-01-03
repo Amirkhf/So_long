@@ -17,6 +17,8 @@ SRCS = $(SRCS_DIR)/main.c \
        $(SRCS_DIR)/parsing/check_map.c \
        $(SRCS_DIR)/parsing/read_map.c \
        $(SRCS_DIR)/parsing/utils.c \
+       $(SRCS_DIR)/play/draw_map.c \
+       $(SRCS_DIR)/play/draw_wall.c \
        $(INC_DIR)/struct.c
 
 LIBFT_SRCS = $(LIBFT_DIR)/ft_split.c \

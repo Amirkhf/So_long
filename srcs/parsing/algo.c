@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 18:15:30 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/01 18:21:16 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/03 20:24:12 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	dfs(char **map, int x, int y)
 {
 	if (map[x][y] == 'A' || map[x][y] == '1')
 		return ;
-	if (x < 0 || x > nb_ligne(map) || y < 0 || y > ft_strlen(map[0]))
+	if (x < 0 || x > ft_nb_line(map) || y < 0 || y > ft_strlen(map[0]))
 		return ;
 	else
 		map[x][y] = 'A';
@@ -46,12 +46,16 @@ int	verif_path(char **map)
 	return (0);
 }
 
-int	nb_ligne(char **map)
+int	ft_nb_line(char **map)
 {
 	int i;
-
+	int count;
+	count = 0;
 	i = 0;
 	while (map[i])
+	{
+		count++;
 		i++;
-	return (i);
+	}
+	return (count);
 }

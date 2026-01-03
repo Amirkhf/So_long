@@ -16,36 +16,62 @@ typedef struct s_count
 	int		j;
 }			t_count;
 
-typedef struct s_images
+typedef struct s_map
 {
-	int		x;
-	int		y;
+	int		len_line;
+	int		nb_line;
+}			t_map;
+
+typedef struct s_play
+{
 	int		i;
 	int		j;
 	int		width;
 	int		height;
-	void	*Wall;
-	void	*player;
-	void	*ground;
-	void	*collectible;
 	void	*exit;
 	void	*mlx;
 	void	*mlx_win;
-}			t_images;
+	void	*collectible;
+	void	*player;
+	void	*ground;
+	void	*wall_top_right;
+	void	*wall_top_left;
+	void	*wall_top;
+	void	*wall_down_left;
+	void	*wall_down_right;
+	void	*wall_down;
+	void	*wall_left;
+	void	*wall_right;
+	void	*wall_middle;
+}			t_play;
+
+// typedef struct s_images
+// {
+// 	void	*Wall;
+// 	void	*player;
+// 	void	*ground;
+// 	void	*collectible;
+
+// }			t_images;
 
 typedef struct s_position
 {
 	int		y;
 	int		x;
 }			t_position;
-void		draw_pieces(t_images *data, char **map);
-void		draw_player(t_images *data, char **map);
-void		draw_ground(t_images *data, char **map);
-void		draw_map(t_images *data, char **map);
-void		draw_exit(t_images *data, char **map);
-void		draw_wall(t_images *data, char **map);
-void		struct_play(t_images *data);
-int			nb_ligne(char **map);
+
+void		struct_map(t_map *map, char **str);
+void		draw_collectible(t_play *play, char **map);
+void		draw_exit(t_play *play, char **map);
+void		draw_ground(t_play *play, char **map);
+void		draw_player(t_play *play, char **map);
+void		draw_wall_middle(t_play *play, int i, int j);
+void		draw_map(t_play *play, char **map, int len_line);
+void		struct_play(t_play *data, t_map *map_size);
+void		draw_wall(t_play *play, char **map, int len_line);
+void		draw_wall_top(t_play *play, char *str, int len_line);
+void		draw_wall_down(t_play *play, char *str, int len_line, int j);
+int			ft_nb_line(char **map);
 int			verif_path(char **map);
 void		dfs(char **map, int x, int y);
 t_position	player_position(char **map);
@@ -64,4 +90,5 @@ int			count_elements(char **map);
 int			check_wall_top(char *str);
 int			check_character(char **map);
 void		struct_count(t_count *data);
+
 #endif

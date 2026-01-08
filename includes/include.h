@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:34:17 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 13:30:00 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:43:47 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,4 +114,9 @@ int				ft_nb_line(char **map);
 void			*initialise_img(t_all *all, char *str);
 void			struct_all(t_all *all, char *str);
 void			print_img(t_all *all, void *img, int i, int j);
+void			draw_ground(t_all *all);
+void			draw_exit(t_all *all);
+void			draw_player(t_all *all);
+void			draw_collectible(t_all *all);
+void			draw_ennemy(t_all *all);
 #endif

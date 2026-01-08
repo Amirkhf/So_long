@@ -6,7 +6,7 @@
 #    By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/07 18:30:00 by amkhelif          #+#    #+#              #
-#    Updated: 2026/01/08 13:33:58 by amkhelif         ###   ########.fr        #
+#    Updated: 2026/01/08 13:47:22 by amkhelif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS = srcs/main.c \
        srcs/parsing/read_map.c \
        srcs/draw/draw_map.c \
        srcs/draw/draw_wall_v1.c \
+	   srcs/draw/draw_all.c \
        srcs/parsing/all_check.c \
        srcs/parsing/all_check_v2.c \
 	   srcs/draw/draw_wall.c \

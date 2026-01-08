@@ -6,7 +6,7 @@
 #    By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/07 18:30:00 by amkhelif          #+#    #+#              #
-#    Updated: 2026/01/07 18:27:37 by amkhelif         ###   ########.fr        #
+#    Updated: 2026/01/08 13:33:58 by amkhelif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,17 @@ NAME = so_long
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 INCLUDES = -I./includes
+MLX_PATH = ./minilibx-linux
+MLX_FLAGS = -L$(MLX_PATH) -lmlx -lXext -lX11
 
 # Source files
 SRCS = srcs/main.c \
        srcs/parsing/read_map.c \
+       srcs/draw/draw_map.c \
+       srcs/draw/draw_wall_v1.c \
        srcs/parsing/all_check.c \
        srcs/parsing/all_check_v2.c \
+	   srcs/draw/draw_wall.c \
        srcs/parsing/algo.c \
        includes/struct.c \
        libft/ft_itoa.c \
@@ -45,10 +50,16 @@ NC = \033[0m # No Color
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) mlx
 	@echo "$(BLUE)Linking $(NAME)...$(NC)"
-	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) -o $(NAME)
+	@$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) $(MLX_FLAGS) -o $(NAME)
 	@echo "$(GREEN)✓ $(NAME) created successfully$(NC)"
+
+mlx:
+	@if [ ! -f $(MLX_PATH)/libmlx.a ]; then \
+		echo "$(YELLOW)Building minilibx...$(NC)"; \
+		cd $(MLX_PATH) && make -j4 > /dev/null 2>&1; \
+	fi
 
 %.o: %.c
 	@echo "$(YELLOW)Compiling $<...$(NC)"
@@ -86,4 +97,4 @@ test_invalid: $(NAME)
 	@echo "$(YELLOW)Test 6: Non-rectangular$(NC)"
 	@./$(NAME) test_invalid6.ber 2>&1 | grep -v "^111" || true
 
-.PHONY: all clean fclean re test test_invalid
+.PHONY: all clean fclean re test test_invalid mlx

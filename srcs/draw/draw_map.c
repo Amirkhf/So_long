@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   draw_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/07 17:35:43 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 12:36:57 by amkhelif         ###   ########.fr       */
+/*   Created: 2026/01/08 12:07:07 by amkhelif          #+#    #+#             */
+/*   Updated: 2026/01/08 13:30:04 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/include.h"
+#include "../../includes/include.h"
 
-int	main(int argc, char **argv)
+void	draw_map(t_all *all)
 {
-	t_all	all;
-
-	if (argc == 2)
-	{
-		if (check_map(argv[1]))
-			return (write(1, "Error\n", 6), 0);
-		struct_all(&all, argv[1]);
-		draw_map(&all);
-		mlx_loop(all.window.mlx);
-	}
-	return (1);
+	draw_wall(all);
 }
 

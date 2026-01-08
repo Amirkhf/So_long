@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:30:03 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 15:17:34 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/08 20:01:16 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,25 @@ int	verif_move_player(t_all *all, int move)
 	y = all->player_position.y;
 	if (move == 1)
 	{
+		printf("verif_direction_top\n");
 		if (verif_direction(all, x - 1, y))
 			return (1);
 	}
 	else if (move == 2)
 	{
+		printf("verif_direction_down\n");
 		if (verif_direction(all, x + 1, y))
 			return (1);
 	}
 	else if (move == 3)
 	{
+		printf("verif_direction_left\n");
 		if (verif_direction(all, x, y - 1))
 			return (1);
 	}
 	else if (move == 4)
 	{
+		printf("verif_direction_right\n");
 		if (verif_direction(all, x, y + 1))
 			return (1);
 	}

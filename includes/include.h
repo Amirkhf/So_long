@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:34:17 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 15:20:53 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/08 20:42:46 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,9 @@ typedef struct s_game
 
 typedef struct s_images
 {
+	int			count_collect;
+	int			nb_collect;
+	int			count_move;
 	int			width;
 	int			height;
 	void		*collect;
@@ -102,6 +105,9 @@ void			print_ramdom_wall_top(t_all *all, int i, int j);
 void			print_img(t_all *all, void *img, int i, int j);
 void			draw_wall_down(t_all *all, int len_line, int nb_line,
 					char *str);
+void			take_collect(t_all *all);
+int				nb_collect(t_all *all);
+void			move(t_all *all);
 int				ft_nb_collect(char **map);
 int				check_map(char *str);
 int				check_name(char *str);

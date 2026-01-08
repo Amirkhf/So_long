@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:59:29 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 15:11:51 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/08 20:40:06 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,80 +23,93 @@
 // on mes a jour la position du jouer
 void	move_player_top(t_all *all)
 {
-	int	x;
-	int	y;
-
-	x = all->player_position.x;
-	y = all->player_position.y;
-	if (verif_move_player(all, 1))
+	if (verif_move_player(all, 1) == 1)
 		return ;
 	else if (its_collect(all, 1))
 	{
-		all->window.map[x - 1][y] = '0';
+		printf("c un collecitble\n");
+		all->window.map[all->player_position.x
+			- 1][all->player_position.y] = '0';
 		all->messure.nb_collect--;
+		take_collect(all);
 	}
-	finish_game(all, x - 1, y);
-	print_img(all, all->images.ground, x, y);
-	print_img(all, all->images.player, x - 1, y);
+	finish_game(all, all->player_position.x - 1, all->player_position.y);
+	print_img(all, all->images.ground, all->player_position.y,
+		all->player_position.x);
+	print_img(all, all->images.player, all->player_position.y,
+		all->player_position.x - 1);
 	all->player_position.x -= 1;
+	move(all);
 }
 
 void	move_player_down(t_all *all)
 {
-	int	x;
-	int	y;
-
-	x = all->player_position.x;
-	y = all->player_position.y;
 	if (verif_move_player(all, 2))
+	{
+		printf("pas bon move player down\n");
 		return ;
+	}
 	else if (its_collect(all, 2))
 	{
-		all->window.map[x + 1][y] = '0';
+		printf("c un collecitble\n");
+		all->window.map[all->player_position.x
+			+ 1][all->player_position.y] = '0';
 		all->messure.nb_collect--;
+		take_collect(all);
 	}
-	finish_game(all, x + 1, y);
-	print_img(all, all->images.ground, x, y);
-	print_img(all, all->images.player, x + 1, y);
+	finish_game(all, all->player_position.x + 1, all->player_position.y);
+	print_img(all, all->images.ground, all->player_position.y,
+		all->player_position.x);
+	print_img(all, all->images.player, all->player_position.y,
+		all->player_position.x + 1);
 	all->player_position.x += 1;
+	move(all);
 }
 
 void	move_player_left(t_all *all)
 {
-	int	x;
-	int	y;
-
-	x = all->player_position.x;
-	y = all->player_position.y;
 	if (verif_move_player(all, 3))
+	{
+		printf("pas bon move player left\n");
 		return ;
+	}
 	else if (its_collect(all, 3))
 	{
-		all->window.map[x][y - 1] = '0';
+		printf("c un collecitble\n");
+		all->window.map[all->player_position.x][all->player_position.y
+			- 1] = '0';
 		all->messure.nb_collect--;
+		take_collect(all);
 	}
-	finish_game(all, x, y - 1);
-	print_img(all, all->images.ground, x, y);
-	print_img(all, all->images.player, x, y - 1);
+	finish_game(all, all->player_position.x, all->player_position.y - 1);
+	print_img(all, all->images.ground, all->player_position.y,
+		all->player_position.x);
+	print_img(all, all->images.player, all->player_position.y - 1,
+		all->player_position.x);
 	all->player_position.y -= 1;
+	move(all);
 }
 
 void	move_player_right(t_all *all)
 {
-	int	x;
-	int	y;
-
-	x = all->player_position.x;
-	y = all->player_position.y;
 	if (verif_move_player(all, 4))
+	{
+		printf("pas bon move player right\n");
 		return ;
+	}
 	else if (its_collect(all, 4))
 	{
-		all->window.map[x][y + 1] = '0';
+		printf("c un collecitble\n");
+		all->window.map[all->player_position.x][all->player_position.y
+			+ 1] = '0';
 		all->messure.nb_collect--;
+		take_collect(all);
 	}
-	finish_game(all, x, y + 1);
-	print_img(all, all->images.ground, x, y);
-	print_img(all, all->images.player, x, y + 1);
+	finish_game(all, all->player_position.x, all->player_position.y + 1);
+	print_img(all, all->images.ground, all->player_position.y,
+		all->player_position.x);
+	print_img(all, all->images.player, all->player_position.y + 1,
+		all->player_position.x);
 	all->player_position.y += 1;
+	move(all);
 }

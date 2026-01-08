@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:35:43 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 15:22:41 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/08 20:39:11 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ int	main(int argc, char **argv)
 			return (write(1, "Error\n", 6), 0);
 		struct_all(&all, argv[1]);
 		draw_map(&all);
-		mlx_key_hook(all.window.mlx, move_player, &all);
-		printf("ok\n");
+		mlx_key_hook(all.window.mlx_win, move_player, &all);
 		mlx_loop(all.window.mlx);
 	}
 	return (1);
@@ -31,7 +30,6 @@ int	main(int argc, char **argv)
 
 int	move_player(int direction, t_all *all)
 {
-	printf("ok\n");
 	if (direction == W || direction == TOP)
 		move_player_top(all);
 	else if (direction == S || direction == DOWN)

@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 18:22:46 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/07 18:31:50 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/08 20:47:34 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ int	ft_nb_line(char **map)
 
 	i = 0;
 	while (map[i])
-	{
 		i++;
-	}
 	return (i);
 }

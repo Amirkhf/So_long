@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:34:17 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 13:43:47 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/08 15:20:53 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,21 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# define W 119
+# define S 115
+# define A 97
+# define D 100
+# define TOP 65362
+# define LEFT 65361
+# define RIGHT 65363
+# define DOWN 65364
+# define ESC 65307
+
 typedef struct s_messure
 {
 	int			len_line;
 	int			nb_line;
+	int			nb_collect;
 }				p_messure;
 
 typedef struct s_count
@@ -91,6 +102,7 @@ void			print_ramdom_wall_top(t_all *all, int i, int j);
 void			print_img(t_all *all, void *img, int i, int j);
 void			draw_wall_down(t_all *all, int len_line, int nb_line,
 					char *str);
+int				ft_nb_collect(char **map);
 int				check_map(char *str);
 int				check_name(char *str);
 char			*ft_itoa(int n);
@@ -119,4 +131,15 @@ void			draw_exit(t_all *all);
 void			draw_player(t_all *all);
 void			draw_collectible(t_all *all);
 void			draw_ennemy(t_all *all);
+
+void			move_player_top(t_all *all);
+void			move_player_left(t_all *all);
+void			move_player_right(t_all *all);
+int				verif_direction(t_all *all, int x, int y);
+int				verif_move_player(t_all *all, int move);
+int				its_collect(t_all *all, int move);
+void			finish_game(t_all *all, int x, int y);
+int				move_player(int direction, t_all *all);
+void			move_player_down(t_all *all);
+
 #endif

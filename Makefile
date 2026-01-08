@@ -6,7 +6,7 @@
 #    By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/07 18:30:00 by amkhelif          #+#    #+#              #
-#    Updated: 2026/01/08 13:47:22 by amkhelif         ###   ########.fr        #
+#    Updated: 2026/01/08 15:14:38 by amkhelif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ MLX_FLAGS = -L$(MLX_PATH) -lmlx -lXext -lX11
 
 # Source files
 SRCS = srcs/main.c \
+       srcs/move/utils.c \
+       srcs/move/move_player.c\
        srcs/parsing/read_map.c \
        srcs/draw/draw_map.c \
        srcs/draw/draw_wall_v1.c \

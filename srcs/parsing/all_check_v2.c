@@ -6,12 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:55:48 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 12:06:31 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/08 14:09:26 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/include.h"
-
 
 int	check_map(char *str)
 {
@@ -31,4 +30,25 @@ int	check_map(char *str)
 	if (verif_path(map))
 		return (free_function(map), 1);
 	return (free_function(map), 0);
+}
+int	ft_nb_collect(char **map)
+{
+	int count;
+	int i;
+	int j;
+
+	count = 0;
+	i = 0;
+	while (map[i])
+	{
+		j = 0;
+		while (map[i][j])
+		{
+			if (map[i][j] == 'C')
+				count++;
+			j++;
+		}
+		i++;
+	}
+	return (count);
 }

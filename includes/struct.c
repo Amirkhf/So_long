@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:58:40 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/07 19:28:15 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/08 15:18:21 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	struct_all(t_all *all, char *str)
 	all->window.map = read_map(str, all->window.map);
 	all->messure.len_line = ft_strlen(all->window.map[0]);
 	all->messure.nb_line = ft_nb_line(all->window.map);
-	all->window.mlx_win = mlx_new_window(all->window.mlx,all->messure.len_line * 96, all->messure.nb_line * 96,"ntm");
+	all->window.mlx_win = mlx_new_window(all->window.mlx, all->messure.len_line
+			* 96, all->messure.nb_line * 96, "ntm");
 	all->images.collect = initialise_img(all, "img/collect.xpm");
 	all->images.ennemy = initialise_img(all, "img/ennemy.xpm");
 	all->images.exit = initialise_img(all, "img/exit.xpm");
@@ -46,6 +47,7 @@ void	struct_all(t_all *all, char *str)
 	all->images.wall_top_right = initialise_img(all, "img/wall_top_right.xpm");
 	all->images.wall_top_shark = initialise_img(all, "img/wall_top_shark.xpm");
 	all->images.wall_top = initialise_img(all, "img/wall_top.xpm");
+	all->messure.nb_collect = ft_nb_collect(all->window.map);
 }
 
 void	struct_count(t_count *data)

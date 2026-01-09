@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:34:17 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 14:03:39 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:03:53 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,11 @@ typedef struct s_images
 	void		*wall_top_right;
 	void		*wall_top_shark;
 	void		*wall_top;
+	void		*collect_v1;
+	void		*collect_v2;
+	void		*collect_v3;
+	void		*collect_v4;
+	void		*collect_v5;
 }				p_images;
 
 typedef struct s_all
@@ -96,6 +101,8 @@ typedef struct s_all
 	p_messure	messure;
 }				t_all;
 
+void			struct_all_v2(t_all *all);
+int				its_collect(t_all *all, int move, int x, int y);
 int				verif_player_safe(t_all *all);
 void			move_ennemy_random_direction(t_all *all, int i, int j);
 void			position_ennemy(t_all *all);
@@ -108,6 +115,8 @@ void			print_ramdom_wall_top(t_all *all, int i, int j);
 void			print_img(t_all *all, void *img, int i, int j);
 void			draw_wall_down(t_all *all, int len_line, int nb_line,
 					char *str);
+int				select_collectible(t_all *all);
+int				animation_collect(t_all *all, int i, int j);
 int				boucle_play(t_all *all);
 void			ft_finish(t_all *all);
 void			take_collect(t_all *all);
@@ -147,8 +156,7 @@ void			move_player_top(t_all *all);
 void			move_player_left(t_all *all);
 void			move_player_right(t_all *all);
 int				verif_direction(t_all *all, int x, int y);
-int				verif_move_player(t_all *all, int move);
-int				its_collect(t_all *all, int move);
+int				verif_move_player(t_all *all, int move, int x, int y);
 void			finish_game(t_all *all, int x, int y);
 int				move_player(int direction, t_all *all);
 void			move_player_down(t_all *all);
@@ -162,5 +170,5 @@ void			ft_finish(t_all *all);
 int				verif_direction_wall(t_all *all, int i, int j, int direction);
 void			kill_ennemy(t_all *all, int i, int j);
 void			move_ennemy_down(t_all *all, int i, int j);
-
+int				verif_direction_wall_v2(t_all *all, int i, int j);
 #endif

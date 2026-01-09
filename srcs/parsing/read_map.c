@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:45:18 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/07 17:49:41 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 14:48:08 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	**read_map(char *str, char **map)
 	char	*buf;
 	char	*str_map;
 
-	printf("read_map\n");
 	size = 1;
 	fd = open(str, O_RDONLY);
 	str_map = NULL;

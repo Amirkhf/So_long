@@ -6,92 +6,57 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 12:48:50 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 14:20:07 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 17:07:30 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/include.h"
 
-int	timer(t_all *all)
+void	move_ennemy_top(t_all *all, int i, int j)
 {
-	static long long	timer = 0;
-
-	printf("un\n");
-	if (timer == 1500000)
-	{
-		position_ennemy(all);
-		timer = 0;
-	}
-	timer++;
-	return (0);
+	if (verif_direction_wall(all, i, j, 0))
+		return ;
+	print_img(all, all->images.ground, j, i);
+	print_img(all, all->images.ennemy, j, i - 1);
+	all->window.map[i][j] = '0';
+	all->window.map[i - 1][j] = 'Z';
 }
 
-void	move_ennemy_random_direction(t_all *all, int i, int j)
+void	move_ennemy_down(t_all *all, int i, int j)
 {
-	int	direction;
-
-	printf("move_ennemy_random_direction\n");
-	direction = rand() % 4;
-	if (direction == 0)
-		move_ennemy_top(all, i, j);
-	else if (direction == 1)
-		move_ennemy_down(all, i, j);
-	else if (direction == 2)
-		move_ennemy_left(all, i, j);
-	else if (direction == 3)
-		move_ennemy_right(all, i, j);
+	if (verif_direction_wall(all, i, j, 1))
+		return ;
+	print_img(all, all->images.ground, j, i);
+	print_img(all, all->images.ennemy, j, i + 1);
+	all->window.map[i][j] = '0';
+	all->window.map[i + 1][j] = 'Z';
 }
 
-void	clean_map(t_all *all)
+void	move_ennemy_left(t_all *all, int i, int j)
 {
-	int	i;
-	int	j;
-
-	printf("clen_map\n");
-	i = 0;
-	while (all->window.map[i])
-	{
-		j = 0;
-		while (all->window.map[i][j])
-		{
-			if (all->window.map[i][j] == 'Z')
-				all->window.map[i][j] = 'X';
-			j++;
-		}
-		i++;
-	}
+	if (verif_direction_wall(all, i, j, 2))
+		return ;
+	print_img(all, all->images.ground, j, i);
+	print_img(all, all->images.ennemy, j - 1, i);
+	all->window.map[i][j] = '0';
+	all->window.map[i][j - 1] = 'Z';
+}
+void	move_ennemy_right(t_all *all, int i, int j)
+{
+	if (verif_direction_wall(all, i, j, 3))
+		return ;
+	print_img(all, all->images.ground, j, i);
+	print_img(all, all->images.ennemy, j + 1, i);
+	all->window.map[i][j] = '0';
+	all->window.map[i][j + 1] = 'Z';
 }
 
-void	kill_ennemy(t_all *all, int i, int j)
+int	verif_direction_wall_v2(t_all *all, int i, int j)
 {
-	if (all->window.map[i - 1][j] == 'P' || all->window.map[i + 1][j] == 'P'
-		|| all->window.map[i][j + 1] == 'P' || all->window.map[i][j - 1] == 'P')
+	if (all->window.map[i][j] == '1' || all->window.map[i][j] == 'C'
+		|| all->window.map[i][j] == 'X' || all->window.map[i][j] == 'E')
 	{
-		ft_finish(all);
-	}
-}
-
-int	verif_direction_wall(t_all *all, int i, int j, int direction)
-{
-	if (direction == 0)
-	{
-		if (all->window.map[i - 1][j] == '1')
-			return (1);
-	}
-	else if (direction == 1)
-	{
-		if (all->window.map[i + 1][j] == '1')
-			return (1);
-	}
-	else if (direction == 3)
-	{
-		if (all->window.map[i][j + 1] == '1')
-			return (1);
-	}
-	else if (direction == 2)
-	{
-		if (all->window.map[i][j - 1] == '1')
-			return (1);
+		return (1);
 	}
 	return (0);
 }

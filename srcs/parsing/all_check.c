@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:55:32 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/07 18:07:30 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 14:48:27 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	check_character(char **map)
 			if (map[i][j] != 'E' && map[i][j] != 'C' && map[i][j] != 'P'
 				&& map[i][j] != '0' && map[i][j] != '1' && map[i][j] != 'X')
 			{
-				return (printf("check_character"), 1);
+				return ( 1);
 			}
 			j++;
 		}
@@ -71,7 +71,6 @@ int	check_name(char *str)
 {
 	int	i;
 
-	printf("check_name\n");
 	i = ft_strlen(str);
 	i--;
 	if (str[i] != 'r' || str[i - 1] != 'e' || str[i - 2] != 'b' || str[i

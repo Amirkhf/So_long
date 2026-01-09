@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 12:48:50 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 13:12:33 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 13:21:59 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 int	timer(t_all *all)
 {
-	static int	timer = 0;
+	static long long	timer = 0;
 
-
-	if (timer == 1000000)
+	if (timer == 10000)
 	{
 		printf("1000000000000000000000\n\n\n\n");
 		position_ennemy(all);
 		timer = 0;
 	}
-		timer++;
+	timer++;
 	return (0);
 }
 
@@ -32,15 +31,15 @@ void	move_ennemy_random_direction(t_all *all, int i, int j)
 	int	direction;
 
 	printf("move_ennemy_random_direction\n");
-	direction = rand() % 3;
+	direction = rand() % 4;
 	if (direction == 0)
 		move_ennemy_top(all, i, j);
 	else if (direction == 1)
 		move_ennemy_down(all, i, j);
 	else if (direction == 2)
-		move_ennemy_top(all, i, j);
+		move_ennemy_left(all, i, j);
 	else if (direction == 3)
-		move_ennemy_top(all, i, j);
+		move_ennemy_right(all, i, j);
 }
 
 void	clean_map(t_all *all)

@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 12:00:46 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 13:08:01 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 13:58:23 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,6 @@ void	move_ennemy_top(t_all *all, int i, int j)
 	printf("move_ennemy_top\n");
 	if (verif_direction_wall(all, i, j, 0))
 		return ;
-	else if (all->window.map[i - 1][j] == 'P')
-		ft_finish(all);
-	kill_ennemy(all, i - 1, j);
 	print_img(all, all->images.ground, j, i);
 	print_img(all, all->images.ennemy, j, i - 1);
 	all->window.map[i][j] = '0';
@@ -54,9 +51,6 @@ void	move_ennemy_down(t_all *all, int i, int j)
 	printf("move_ennemy_down\n");
 	if (verif_direction_wall(all, i, j, 1))
 		return ;
-	else if (all->window.map[i + 1][j] == 'P')
-		ft_finish(all);
-	kill_ennemy(all, i + 1, j);
 	print_img(all, all->images.ground, j, i);
 	print_img(all, all->images.ennemy, j, i + 1);
 	all->window.map[i][j] = '0';
@@ -68,9 +62,6 @@ void	move_ennemy_left(t_all *all, int i, int j)
 	printf("move_ennemy_left\n");
 	if (verif_direction_wall(all, i, j, 2))
 		return ;
-	else if (all->window.map[i][j - 1] == 'P')
-		ft_finish(all);
-	kill_ennemy(all, i, j - 1);
 	print_img(all, all->images.ground, j, i);
 	print_img(all, all->images.ennemy, j - 1, i);
 	all->window.map[i][j] = '0';
@@ -82,9 +73,6 @@ void	move_ennemy_right(t_all *all, int i, int j)
 
 	if (verif_direction_wall(all, i, j, 3))
 		return ;
-	else if (all->window.map[i][j + 1] == 'P')
-		ft_finish(all);
-	kill_ennemy(all, i, j + 1);
 	print_img(all, all->images.ground, j, i);
 	print_img(all, all->images.ennemy, j + 1, i);
 	all->window.map[i][j] = '0';

@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 12:48:50 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 13:21:59 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 14:20:07 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	timer(t_all *all)
 {
 	static long long	timer = 0;
 
-	if (timer == 10000)
+	printf("un\n");
+	if (timer == 1500000)
 	{
-		printf("1000000000000000000000\n\n\n\n");
 		position_ennemy(all);
 		timer = 0;
 	}
@@ -49,7 +49,7 @@ void	clean_map(t_all *all)
 
 	printf("clen_map\n");
 	i = 0;
-	while (all->window.map[i][j])
+	while (all->window.map[i])
 	{
 		j = 0;
 		while (all->window.map[i][j])

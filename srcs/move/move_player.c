@@ -6,11 +6,26 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:59:29 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 20:40:06 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 11:56:35 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/include.h"
+
+int	move_player(int direction, t_all *all)
+{
+	if (direction == W || direction == TOP)
+		move_player_top(all);
+	else if (direction == S || direction == DOWN)
+		move_player_down(all);
+	else if (direction == A || direction == LEFT)
+		move_player_left(all);
+	else if (direction == D || direction == RIGHT)
+		move_player_right(all);
+	else if (direction == ESC)
+		exit(0);
+	return (0);
+}
 
 // verifie si dans la direction ou il va
 // ces un mur ou une sortie mes quil a

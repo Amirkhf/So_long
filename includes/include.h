@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:34:17 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 20:42:46 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 13:05:24 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,8 @@ typedef struct s_all
 	p_messure	messure;
 }				t_all;
 
+void			move_ennemy_random_direction(t_all *all, int i, int j);
+void			position_ennemy(t_all *all);
 void			draw_wall_middle(t_all *all, int len_line, int j, char *str);
 void			draw_map(t_all *all);
 void			draw_wall(t_all *all);
@@ -105,6 +107,7 @@ void			print_ramdom_wall_top(t_all *all, int i, int j);
 void			print_img(t_all *all, void *img, int i, int j);
 void			draw_wall_down(t_all *all, int len_line, int nb_line,
 					char *str);
+void			ft_finish(t_all *all);
 void			take_collect(t_all *all);
 int				nb_collect(t_all *all);
 void			move(t_all *all);
@@ -137,7 +140,7 @@ void			draw_exit(t_all *all);
 void			draw_player(t_all *all);
 void			draw_collectible(t_all *all);
 void			draw_ennemy(t_all *all);
-
+void			clean_map(t_all *all);
 void			move_player_top(t_all *all);
 void			move_player_left(t_all *all);
 void			move_player_right(t_all *all);
@@ -147,5 +150,15 @@ int				its_collect(t_all *all, int move);
 void			finish_game(t_all *all, int x, int y);
 int				move_player(int direction, t_all *all);
 void			move_player_down(t_all *all);
+void			move_ennemy_right(t_all *all, int i, int j);
+void			move_ennemy_left(t_all *all, int i, int j);
+void			move_ennemy_top(t_all *all, int i, int j);
+void			move_ennemy_v1(t_all *all, int i, int j);
+void			move_ennemy(t_all *all);
+int				timer(t_all *all);
+void			ft_finish(t_all *all);
+int				verif_direction_wall(t_all *all, int i, int j, int direction);
+void			kill_ennemy(t_all *all, int i, int j);
+void			move_ennemy_down(t_all *all, int i, int j);
 
 #endif

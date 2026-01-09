@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:35:43 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 20:39:11 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 13:01:05 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,14 @@ int	main(int argc, char **argv)
 		struct_all(&all, argv[1]);
 		draw_map(&all);
 		mlx_key_hook(all.window.mlx_win, move_player, &all);
+		mlx_loop_hook(all.window.mlx, timer, &all);
 		mlx_loop(all.window.mlx);
 	}
 	return (1);
 }
 
-int	move_player(int direction, t_all *all)
+void	finish_game(t_all *all, int x, int y)
 {
-	if (direction == W || direction == TOP)
-		move_player_top(all);
-	else if (direction == S || direction == DOWN)
-		move_player_down(all);
-	else if (direction == A || direction == LEFT)
-		move_player_left(all);
-	else if (direction == D || direction == RIGHT)
-		move_player_right(all);
-	else if (direction == ESC)
+	if (all->window.map[x][y] == 'E' && all->messure.nb_collect == 0)
 		exit(0);
-	return (0);
 }

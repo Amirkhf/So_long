@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:30:03 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 20:01:16 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 13:00:08 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,8 +89,9 @@ int	its_collect(t_all *all, int move)
 	}
 	return (0);
 }
-void	finish_game(t_all *all, int x, int y)
+
+void	ft_finish(t_all *all)
 {
-	if (all->window.map[x][y] == 'E' && all->messure.nb_collect == 0)
-		exit(0);
+	free_function(all->window.map);
+	exit(0);
 }

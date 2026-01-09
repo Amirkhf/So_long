@@ -6,7 +6,7 @@
 #    By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/07 18:30:00 by amkhelif          #+#    #+#              #
-#    Updated: 2026/01/08 20:30:56 by amkhelif         ###   ########.fr        #
+#    Updated: 2026/01/09 12:58:55 by amkhelif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,8 @@ SRCS = srcs/main.c \
        srcs/move/utils.c \
        srcs/move/move_player.c\
        srcs/parsing/read_map.c \
+	   srcs/move/move_ennemy_utils.c\
+	   srcs/move/move_ennemy.c\
 	   srcs/move/count_move.c\
        srcs/draw/draw_map.c \
        srcs/draw/draw_wall_v1.c \

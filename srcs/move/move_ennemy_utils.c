@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 12:48:50 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 17:07:30 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 19:02:12 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 void	move_ennemy_top(t_all *all, int i, int j)
 {
@@ -41,6 +41,7 @@ void	move_ennemy_left(t_all *all, int i, int j)
 	all->window.map[i][j] = '0';
 	all->window.map[i][j - 1] = 'Z';
 }
+
 void	move_ennemy_right(t_all *all, int i, int j)
 {
 	if (verif_direction_wall(all, i, j, 3))

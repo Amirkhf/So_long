@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 18:22:46 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 20:47:34 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:30:55 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 void	dfs(char **map, int x, int y)
 {
@@ -48,7 +48,7 @@ int	verif_path(char **map)
 
 int	ft_nb_line(char **map)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (map[i])

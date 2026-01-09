@@ -6,37 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:58:40 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 17:03:47 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:25:42 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include.h"
-
-void	*initialise_img(t_all *all, char *str)
-{
-	return (mlx_xpm_file_to_image(all->window.mlx, str, &all->images.width,
-			&all->images.height));
-}
-
-void	struct_all(t_all *all, char *str)
-{
-	all->window.mlx = mlx_init();
-	all->window.map = read_map(str, all->window.map);
-	all->messure.len_line = ft_strlen(all->window.map[0]);
-	all->messure.nb_line = ft_nb_line(all->window.map);
-	all->window.mlx_win = mlx_new_window(all->window.mlx, all->messure.len_line
-			* 96, all->messure.nb_line * 96, "ntm");
-	all->images.collect = initialise_img(all, "img/collect.xpm");
-	all->player_position = player_position(all->window.map);
-	all->images.ennemy = initialise_img(all, "img/ennemy.xpm");
-	all->images.exit = initialise_img(all, "img/exit.xpm");
-	all->images.ground = initialise_img(all, "img/ground.xpm");
-	all->images.player = initialise_img(all, "img/player.xpm");
-	all->images.wall_down_left = initialise_img(all, "img/wall_down_left.xpm");
-	all->images.wall_down_right = initialise_img(all,
-			"img/wall_down_right.xpm");
-	struct_all_v2(all);
-}
+#include "so_long.h"
 
 void	struct_all_v2(t_all *all)
 {
@@ -60,10 +34,10 @@ void	struct_all_v2(t_all *all)
 	all->images.count_move = 0;
 	all->images.count_collect = 0;
 	all->images.collect_v1 = initialise_img(all, "img/collect_v1.xpm");
-	all->images.collect_v1 = initialise_img(all, "img/collect_v2.xpm");
+	all->images.collect_v2 = initialise_img(all, "img/collect_v2.xpm");
 	all->images.collect_v3 = initialise_img(all, "img/collect_v3.xpm");
-	all->images.collect_v3 = initialise_img(all, "img/collect_v4.xpm");
-	all->images.collect_v3 = initialise_img(all, "img/collect_v5.xpm");
+	all->images.collect_v4 = initialise_img(all, "img/collect_v4.xpm");
+	all->images.collect_v5 = initialise_img(all, "img/collect_v5.xpm");
 }
 
 void	struct_count(t_count *data)

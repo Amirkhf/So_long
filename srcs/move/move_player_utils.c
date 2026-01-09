@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 16:35:02 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 16:57:57 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:24:46 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 int	move_player(int direction, t_all *all)
 {
@@ -23,7 +23,7 @@ int	move_player(int direction, t_all *all)
 	else if (direction == D || direction == RIGHT)
 		move_player_right(all);
 	else if (direction == ESC)
-		exit(0);
+		ft_finish(all);
 	return (0);
 }
 
@@ -54,7 +54,6 @@ int	verif_move_player(t_all *all, int move, int x, int y)
 
 int	its_collect(t_all *all, int move, int x, int y)
 {
-
 	if (move == 1)
 	{
 		if (all->window.map[x - 1][y] == 'C')

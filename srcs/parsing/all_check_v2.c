@@ -6,16 +6,16 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:55:48 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 14:09:26 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:30:08 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 int	check_map(char *str)
 {
 	char		**map;
-	p_position	position_player;
+	t_position	position_player;
 
 	map = NULL;
 	if (check_name(str))
@@ -31,11 +31,12 @@ int	check_map(char *str)
 		return (free_function(map), 1);
 	return (free_function(map), 0);
 }
+
 int	ft_nb_collect(char **map)
 {
-	int count;
-	int i;
-	int j;
+	int	count;
+	int	i;
+	int	j;
 
 	count = 0;
 	i = 0;

@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 12:07:07 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 13:45:49 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:57:15 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 void	draw_map(t_all *all)
 {
@@ -21,5 +21,3 @@ void	draw_map(t_all *all)
 	draw_collectible(all);
 	draw_ennemy(all);
 }
-
-

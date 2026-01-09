@@ -6,15 +6,15 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 13:00:52 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/01 13:01:15 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:25:28 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/include.h"
+#include "../includes/so_long.h"
 
 int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str && str[i])

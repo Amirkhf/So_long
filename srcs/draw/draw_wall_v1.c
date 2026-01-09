@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:27:20 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 17:20:39 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:58:12 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 void	random_wall_middle(t_all *all, int i, int j)
 {

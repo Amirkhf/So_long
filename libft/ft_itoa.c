@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 15:48:05 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/06 13:11:50 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:25:38 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/include.h"
+#include "../includes/so_long.h"
 
 static int	count_digit(int n)
 {

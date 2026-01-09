@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:45:18 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 14:48:08 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:24:05 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/include.h"
+#include "../includes/so_long.h"
 
 char	**read_map(char *str, char **map)
 {

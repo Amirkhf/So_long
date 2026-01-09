@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 12:30:33 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/01 13:27:49 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:25:30 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/include.h"
+#include "../includes/so_long.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {

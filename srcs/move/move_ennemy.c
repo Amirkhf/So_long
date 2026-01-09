@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 12:00:46 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 16:57:29 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 19:01:42 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 int	timer(t_all *all)
 {
@@ -105,4 +105,3 @@ int	verif_direction_wall(t_all *all, int i, int j, int direction)
 	}
 	return (0);
 }
-

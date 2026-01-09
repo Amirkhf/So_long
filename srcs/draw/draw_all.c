@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:45:27 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 13:46:00 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:58:42 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 void	draw_ennemy(t_all *all)
 {
@@ -90,8 +90,8 @@ void	draw_exit(t_all *all)
 
 void	draw_collectible(t_all *all)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (all->window.map[i])

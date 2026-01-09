@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   include.h                                          :+:      :+:    :+:   */
+/*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/07 17:34:17 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 17:03:53 by amkhelif         ###   ########.fr       */
+/*   Created: 2026/01/09 18:21:16 by amkhelif          #+#    #+#             */
+/*   Updated: 2026/01/09 19:00:42 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-// # include "../minilibx-linux/mlx.h"
-# include "../minilibx-linux/mlx.h"
+//# include "../minilibx-linux/mlx.h"
 # include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -35,7 +34,7 @@ typedef struct s_messure
 	int			len_line;
 	int			nb_line;
 	int			nb_collect;
-}				p_messure;
+}				t_messure;
 
 typedef struct s_count
 {
@@ -50,14 +49,14 @@ typedef struct s_position
 {
 	int			x;
 	int			y;
-}				p_position;
+}				t_position;
 
 typedef struct s_game
 {
 	char		**map;
 	void		*mlx;
 	void		*mlx_win;
-}				p_game;
+}				t_game;
 
 typedef struct s_images
 {
@@ -91,16 +90,18 @@ typedef struct s_images
 	void		*collect_v3;
 	void		*collect_v4;
 	void		*collect_v5;
-}				p_images;
+}				t_images;
 
 typedef struct s_all
 {
-	p_images	images;
-	p_position	player_position;
-	p_game		window;
-	p_messure	messure;
+	t_images	images;
+	t_position	player_position;
+	t_game		window;
+	t_messure	messure;
 }				t_all;
 
+void			ft_finish_v3(t_all *all);
+void			ft_finish_v2(t_all *all);
 void			struct_all_v2(t_all *all);
 int				its_collect(t_all *all, int move, int x, int y);
 int				verif_player_safe(t_all *all);
@@ -129,14 +130,14 @@ char			*ft_itoa(int n);
 void			free_function(char **str);
 char			*ft_strjoin(char *s1, char *s2);
 int				ft_strlen(char *str);
-int				check_ennemy(char **map, p_position *position);
+int				check_ennemy(char **map, t_position *position);
 int				count_elements(char **map);
 int				check_character(char **map);
 int				check_name(char *str);
 void			struct_count(t_count *data);
 char			**ft_split(char const *s, char c);
 char			**read_map(char *str, char **map);
-p_position		player_position(char **map);
+t_position		player_position(char **map);
 int				check_wall(char **map);
 int				check_wall_top(char *str);
 int				check_rectangular(char **map, int len);

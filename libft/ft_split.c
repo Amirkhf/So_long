@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 15:37:20 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/05 14:23:14 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:25:34 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/include.h"
+#include "../includes/so_long.h"
 
 static int	count_word(char const *str, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:16:30 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 13:27:55 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 18:58:00 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 void	draw_wall(t_all *all)
 {
@@ -47,7 +47,6 @@ void	draw_wall_middle(t_all *all, int len_line, int j, char *str)
 	}
 }
 
-
 void	draw_wall_down(t_all *all, int len_line, int nb_line, char *str)
 {
 	int	i;
@@ -81,4 +80,3 @@ void	draw_wall_top(t_all *all, int len_line, char *str)
 		i++;
 	}
 }
-

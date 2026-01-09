@@ -6,11 +6,11 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 20:21:54 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/08 21:04:49 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/09 19:01:27 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/include.h"
+#include "../../includes/so_long.h"
 
 void	take_collect(t_all *all)
 {
@@ -52,9 +52,9 @@ void	move(t_all *all)
 
 int	nb_collect(t_all *all)
 {
-	int i;
-	int j;
-	int count;
+	int	i;
+	int	j;
+	int	count;
 
 	count = 0;
 	i = 0;

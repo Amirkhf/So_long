@@ -1,0 +1,11 @@
+# Object files
+*.o
+
+# Executable
+so_long
+
+# Libraries
+*.a
+
+# OS files
+.DS_Store

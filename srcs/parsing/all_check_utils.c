@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:27:49 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 18:56:47 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:28:14 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	check_wall_top(char *str)
 	while (str[i])
 	{
 		if (str[i] != '1')
-			return (printf("check wall top"), 1);
+			return (1);
 		i++;
 	}
 	return (0);
@@ -62,7 +62,7 @@ int	check_wall(char **map)
 	while (map[i])
 	{
 		if ((map[i][0] != '1') || (map[i][len_line - 1] != '1'))
-			return (printf("check wall"), 1);
+			return (1);
 		i++;
 	}
 	i--;

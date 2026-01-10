@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:55:32 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 18:29:44 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:28:30 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	count_elements(char **map)
 		count.i++;
 	}
 	if (count.c == 0 || count.e != 1 || count.p != 1)
-		return (printf("count_elements"), 1);
+		return (1);
 	return (0);
 }
 

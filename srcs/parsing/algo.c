@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 18:22:46 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 18:30:55 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:28:44 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	verif_path(char **map)
 		while (map[i][j])
 		{
 			if (map[i][j] == 'C' || map[i][j] == 'E')
-				return (printf("verif_path"), 1);
+				return (1);
 			j++;
 		}
 		i++;

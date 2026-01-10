@@ -93,4 +93,4 @@ Le `Z` sert à dire à la fonction `position_enemy` : "Cet ennemi a déjà boug�
 
 ## Aperçu du jeu
 
-![Aperçu du jeu](<Screenshot from img/2026-01-10 15-59-40.png>)
+![Aperçu du jeu](img/Screenshot%20from%202026-01-10%2015-59-40.png)

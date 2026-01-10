@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:11:39 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 13:17:52 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 15:59:21 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	struct_all(t_all *all, char *str)
 	all->messure.len_line = ft_strlen(all->window.map[0]);
 	all->messure.nb_line = ft_nb_line(all->window.map);
 	all->window.mlx_win = mlx_new_window(all->window.mlx, all->messure.len_line
-			* 96, all->messure.nb_line * 96, "ntm");
+			* 96, all->messure.nb_line * 96, "So_Long");
 	all->images.collect = initialise_img(all, "img/collect.xpm");
 	all->player_position = player_position(all->window.map);
 	all->images.ennemy = initialise_img(all, "img/ennemy.xpm");

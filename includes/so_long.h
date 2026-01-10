@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:21:16 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 14:26:17 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 16:24:53 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ typedef struct s_all
 	t_messure	messure;
 }				t_all;
 
+void			ft_putstr(char *s);
 void			screen_game_win_v2(t_all *all);
 void			screen_game_win(t_all *all);
 void			screen_game_over(t_all *all);

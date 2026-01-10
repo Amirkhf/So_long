@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 20:21:54 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 13:06:23 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 16:25:16 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ void	take_collect(t_all *all)
 	mlx_put_image_to_window(all->window.mlx, all->window.mlx_win,
 		all->images.wall_top_right, (ft_strlen(all->window.map[0]) - 1)
 		* all->images.width, 0 * all->images.height);
-	mlx_string_put(all->window.mlx, all->window.mlx_win, all->messure.len_line, 15, 0xFFFFFF,
-		"collect: ");
-	mlx_string_put(all->window.mlx, all->window.mlx_win, all->messure.len_line + 5, 15, 0xFFFFFF,
-		str);
-	mlx_string_put(all->window.mlx, all->window.mlx_win, all->messure.len_line + 10, 15, 0xFFFFFF,
-		"/");
-	mlx_string_put(all->window.mlx, all->window.mlx_win, all->messure.len_line + 15, 15, 0xFFFFFF,
-		str_all);
+	mlx_string_put(all->window.mlx, all->window.mlx_win, all->messure.len_line,
+		15, 0xFFFFFF, "collect: ");
+	mlx_string_put(all->window.mlx, all->window.mlx_win, all->messure.len_line
+		+ 5, 15, 0xFFFFFF, str);
+	mlx_string_put(all->window.mlx, all->window.mlx_win, all->messure.len_line
+		+ 10, 15, 0xFFFFFF, "/");
+	mlx_string_put(all->window.mlx, all->window.mlx_win, all->messure.len_line
+		+ 15, 15, 0xFFFFFF, str_all);
 	free(str);
 	free(str_all);
 }
@@ -47,6 +47,7 @@ void	move(t_all *all)
 	mlx_string_put(all->window.mlx, all->window.mlx_win, 10, 15, 0xFFFFFF,
 		"move: ");
 	mlx_string_put(all->window.mlx, all->window.mlx_win, 50, 15, 0xFFFFFF, str);
+	ft_putstr(str);
 	free(str);
 }
 

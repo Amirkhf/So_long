@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:09:22 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 13:53:57 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 16:25:28 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	boucle_play(t_all *all)
 {
 	timer(all);
 	verif_player_safe(all);
+	//animation(all);
 	return (0);
 }
 

@@ -29,6 +29,7 @@ SRCS = srcs/main.c \
        libft/ft_split.c \
        libft/ft_strjoin.c \
        libft/ft_strlen.c \
+       libft/ft_putstr.c \
        srcs/game_over/game_over.c\
        srcs/game_over/win.c
 

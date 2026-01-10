@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:09:22 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 12:47:45 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 13:41:31 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ int	verif_player_safe(t_all *all)
 void	finish_game(t_all *all, int x, int y)
 {
 	if (all->window.map[x][y] == 'E' && all->messure.nb_collect == 0)
-		ft_finish(all);
+	{
+		screen_game_win(all);
+	}
 }

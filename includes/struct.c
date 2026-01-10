@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:58:40 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 13:03:13 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 13:38:28 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	struct_all_v2(t_all *all)
 	all->images.collect_v3 = initialise_img(all, "img/collect_v3.xpm");
 	all->images.collect_v4 = initialise_img(all, "img/collect_v4.xpm");
 	all->images.collect_v5 = initialise_img(all, "img/collect_v5.xpm");
+	all->images.win = initialise_img(all, "img/win.xpm");
 }
 
 void	struct_count(t_count *data)

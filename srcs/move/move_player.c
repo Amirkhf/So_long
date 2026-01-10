@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:59:29 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 18:24:41 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 14:05:33 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	move_player_top(t_all *all)
 		all->messure.nb_collect--;
 		take_collect(all);
 	}
-	finish_game(all, all->player_position.x - 1, all->player_position.y);
 	print_img(all, all->images.ground, all->player_position.y,
 		all->player_position.x);
 	print_img(all, all->images.player, all->player_position.y,
@@ -47,7 +46,6 @@ void	move_player_down(t_all *all)
 		all->messure.nb_collect--;
 		take_collect(all);
 	}
-	finish_game(all, all->player_position.x + 1, all->player_position.y);
 	print_img(all, all->images.ground, all->player_position.y,
 		all->player_position.x);
 	print_img(all, all->images.player, all->player_position.y,
@@ -69,7 +67,6 @@ void	move_player_left(t_all *all)
 		all->messure.nb_collect--;
 		take_collect(all);
 	}
-	finish_game(all, all->player_position.x, all->player_position.y - 1);
 	print_img(all, all->images.ground, all->player_position.y,
 		all->player_position.x);
 	print_img(all, all->images.player, all->player_position.y - 1,
@@ -91,7 +88,6 @@ void	move_player_right(t_all *all)
 		all->messure.nb_collect--;
 		take_collect(all);
 	}
-	finish_game(all, all->player_position.x, all->player_position.y + 1);
 	print_img(all, all->images.ground, all->player_position.y,
 		all->player_position.x);
 	print_img(all, all->images.player, all->player_position.y + 1,

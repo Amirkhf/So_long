@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:30:03 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 13:37:52 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 14:04:01 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	verif_direction(t_all *all, int x, int y)
 			&& all->messure.nb_collect != 0))
 		return (1);
 	else if (all->window.map[x][y] == 'E' && all->messure.nb_collect == 0)
-		ft_finish(all);
+		screen_game_win(all);
 	return (0);
 }
 

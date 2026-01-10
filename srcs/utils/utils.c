@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:09:22 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 19:02:43 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 12:47:45 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	verif_player_safe(t_all *all)
 		|| all->window.map[all->player_position.x
 		- 1][all->player_position.y] == 'X')
 	{
-		ft_finish(all);
+		screen_game_over(all);
 	}
 	return (0);
 }

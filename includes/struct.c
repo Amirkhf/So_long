@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:58:40 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 18:25:42 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 13:03:13 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	struct_all_v2(t_all *all)
 {
 	all->images.wall_down = initialise_img(all, "img/wall_down.xpm");
-	all->images.nb_collect = nb_collect(all);
+	all->images.collect_nb = ft_nb_collect(all->window.map);
 	all->images.wall_down_v1 = initialise_img(all, "img/wall_down_v1.xpm");
 	all->images.wall_down_v2 = initialise_img(all, "img/wall_down_v2.xpm");
 	all->images.wall_left = initialise_img(all, "img/wall_left.xpm");

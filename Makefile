@@ -1,15 +1,11 @@
-# ============================================================================ #
-# Makefile for so_long                                                       #
-# ============================================================================ #
 
 NAME = so_long
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-INCLUDES = -I./includes
+INCLUDES = -I./includes -I./minilibx-linux
 MLX_PATH = ./minilibx-linux
 MLX_FLAGS = -L$(MLX_PATH) -lmlx -lXext -lX11
 
-# Source files
 SRCS = srcs/main.c \
        srcs/move/utils.c \
        srcs/move/move_player.c \
@@ -24,12 +20,16 @@ SRCS = srcs/main.c \
        srcs/draw/draw_wall.c \
        srcs/parsing/all_check.c \
        srcs/parsing/all_check_v2.c \
+       srcs/parsing/all_check_utils.c \
        srcs/parsing/algo.c \
+       srcs/utils/utils.c \
        includes/struct.c \
+       includes/struct_v2.c \
        libft/ft_itoa.c \
        libft/ft_split.c \
        libft/ft_strjoin.c \
-       libft/ft_strlen.c
+       libft/ft_strlen.c \
+       srcs/game_over/game_over.c
 
 OBJS = $(SRCS:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:30:03 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 19:00:57 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 13:20:01 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void	ft_finish(t_all *all)
 	if (all->images.collect_v4)
 		mlx_destroy_image(all->window.mlx, all->images.collect_v4);
 	if (all->images.collect_v5)
+		mlx_destroy_image(all->window.mlx, all->images.collect_v5);
+	if (all->images.game_over)
 		mlx_destroy_image(all->window.mlx, all->images.collect_v5);
 	ft_finish_v2(all);
 	exit(0);

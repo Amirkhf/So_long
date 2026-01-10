@@ -6,14 +6,14 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:21:16 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 19:00:42 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 13:20:08 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-//# include "../minilibx-linux/mlx.h"
+# include "../minilibx-linux/mlx.h"
 # include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -61,7 +61,7 @@ typedef struct s_game
 typedef struct s_images
 {
 	int			count_collect;
-	int			nb_collect;
+	int			collect_nb;
 	int			count_move;
 	int			width;
 	int			height;
@@ -90,6 +90,7 @@ typedef struct s_images
 	void		*collect_v3;
 	void		*collect_v4;
 	void		*collect_v5;
+	void		*game_over;
 }				t_images;
 
 typedef struct s_all
@@ -100,8 +101,10 @@ typedef struct s_all
 	t_messure	messure;
 }				t_all;
 
+void			screen_game_over(t_all *all);
 void			ft_finish_v3(t_all *all);
 void			ft_finish_v2(t_all *all);
+void			initialise_variable_v2(t_all *all);
 void			struct_all_v2(t_all *all);
 int				its_collect(t_all *all, int move, int x, int y);
 int				verif_player_safe(t_all *all);

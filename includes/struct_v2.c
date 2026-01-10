@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:11:39 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 18:25:49 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 13:17:52 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	initialise_variable_v2(t_all *all)
 	all->window.map = NULL;
 	all->window.mlx = NULL;
 	all->window.mlx_win = NULL;
+	all->images.collect_nb = 0;
 }
 
 void	struct_all(t_all *all, char *str)
@@ -73,5 +74,6 @@ void	struct_all(t_all *all, char *str)
 	all->images.wall_down_left = initialise_img(all, "img/wall_down_left.xpm");
 	all->images.wall_down_right = initialise_img(all,
 			"img/wall_down_right.xpm");
+	all->images.game_over = initialise_img(all, "img/game_over.xpm");
 	struct_all_v2(all);
 }

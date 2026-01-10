@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:35:43 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 18:23:56 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:30:13 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	main(int argc, char **argv)
 		draw_map(&all);
 		mlx_key_hook(all.window.mlx_win, move_player, &all);
 		mlx_loop_hook(all.window.mlx, boucle_play, &all);
+		mlx_hook(all.window.mlx_win, 17, 0, verif_cross, &all);
 		mlx_loop(all.window.mlx);
 	}
 	return (1);

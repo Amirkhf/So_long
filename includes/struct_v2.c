@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:11:39 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 15:59:21 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:51:32 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,13 @@ void	initialise_variable_v2(t_all *all)
 	all->images.wall_top_right = NULL;
 	all->images.wall_top_shark = NULL;
 	all->images.wall_top = NULL;
+	all->images.game_over = NULL;
+	all->images.win = NULL;
+	all->images.wall_top_v1 = NULL;
+	all->images.wall_top_v2 = NULL;
+	all->images.wall_top_v3 = NULL;
+	all->images.wall_top_v4 = NULL;
+	all->images.wall_top_v5 = NULL;
 	all->window.map = NULL;
 	all->window.mlx = NULL;
 	all->window.mlx_win = NULL;
@@ -75,5 +82,10 @@ void	struct_all(t_all *all, char *str)
 	all->images.wall_down_right = initialise_img(all,
 			"img/wall_down_right.xpm");
 	all->images.game_over = initialise_img(all, "img/game_over.xpm");
+	all->images.wall_top_v1 = initialise_img(all, "img/wall_top_v1.xpm");
+	all->images.wall_top_v2 = initialise_img(all, "img/wall_top_v2.xpm");
+	all->images.wall_top_v3 = initialise_img(all, "img/wall_top_v3.xpm");
+	all->images.wall_top_v4 = initialise_img(all, "img/wall_top_v4.xpm");
+	all->images.wall_top_v5 = initialise_img(all, "img/wall_top_v5.xpm");
 	struct_all_v2(all);
 }

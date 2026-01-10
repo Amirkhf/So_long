@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:21:16 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 16:24:53 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:16:51 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,11 @@ typedef struct s_images
 	void		*collect_v5;
 	void		*game_over;
 	void		*win;
+	void		*wall_top_v1;
+	void		*wall_top_v2;
+	void		*wall_top_v3;
+	void		*wall_top_v4;
+	void		*wall_top_v5;
 }				t_images;
 
 typedef struct s_all
@@ -103,6 +108,7 @@ typedef struct s_all
 }				t_all;
 
 void			ft_putstr(char *s);
+void			ft_finish_v4(t_all *all);
 void			screen_game_win_v2(t_all *all);
 void			screen_game_win(t_all *all);
 void			screen_game_over(t_all *all);
@@ -117,6 +123,7 @@ void			position_ennemy(t_all *all);
 void			draw_wall_middle(t_all *all, int len_line, int j, char *str);
 void			draw_map(t_all *all);
 void			draw_wall(t_all *all);
+int				verif_cross(t_all *all);
 void			random_wall_middle(t_all *all, int i, int j);
 void			draw_wall_top(t_all *all, int len_line, char *str);
 void			print_ramdom_wall_top(t_all *all, int i, int j);

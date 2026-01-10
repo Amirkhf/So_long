@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:30:03 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 14:04:01 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:23:57 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,12 @@ void	ft_finish(t_all *all)
 		mlx_destroy_image(all->window.mlx, all->images.collect_v5);
 	if (all->images.game_over)
 		mlx_destroy_image(all->window.mlx, all->images.game_over);
+	if (all->images.wall_top_v1)
+		mlx_destroy_image(all->window.mlx, all->images.wall_top_v1);
+	if (all->images.wall_top_v2)
+		mlx_destroy_image(all->window.mlx, all->images.wall_top_v2);
+	if (all->images.wall_top_v3)
+		mlx_destroy_image(all->window.mlx, all->images.wall_top_v3);
 	ft_finish_v2(all);
 	exit(0);
 }
@@ -63,10 +69,6 @@ void	ft_finish_v2(t_all *all)
 		mlx_destroy_image(all->window.mlx, all->images.wall_down_v1);
 	if (all->images.wall_down_v2)
 		mlx_destroy_image(all->window.mlx, all->images.wall_down_v2);
-	if (all->images.wall_left)
-		mlx_destroy_image(all->window.mlx, all->images.wall_left);
-	if (all->images.win)
-		mlx_destroy_image(all->window.mlx, all->images.win);
 	ft_finish_v3(all);
 }
 
@@ -82,6 +84,19 @@ void	ft_finish_v3(t_all *all)
 		mlx_destroy_image(all->window.mlx, all->images.wall_middle);
 	if (all->images.wall_right)
 		mlx_destroy_image(all->window.mlx, all->images.wall_right);
+	if (all->images.wall_left)
+		mlx_destroy_image(all->window.mlx, all->images.wall_left);
+	if (all->images.win)
+		mlx_destroy_image(all->window.mlx, all->images.win);
+	if (all->images.wall_top_v4)
+		mlx_destroy_image(all->window.mlx, all->images.wall_top_v4);
+	if (all->images.wall_top_v5)
+		mlx_destroy_image(all->window.mlx, all->images.wall_top_v5);
+	ft_finish_v4(all);
+}
+
+void	ft_finish_v4(t_all *all)
+{
 	if (all->images.wall_top_left)
 		mlx_destroy_image(all->window.mlx, all->images.wall_top_left);
 	if (all->images.wall_top_right)

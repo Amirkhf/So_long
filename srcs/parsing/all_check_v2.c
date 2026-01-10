@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 17:55:48 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 13:15:26 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:22:28 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int	ft_nb_collect(char **map)
 	int	count;
 	int	i;
 	int	j;
-
 
 	count = 0;
 	i = 0;

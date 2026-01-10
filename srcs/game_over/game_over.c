@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 12:41:54 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 13:18:05 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:24:41 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	screen_game_over(t_all *all)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (all->window.map[i])
@@ -34,4 +34,11 @@ void	screen_game_over(t_all *all)
 	}
 	usleep(2000000);
 	ft_finish(all);
+}
+
+int	verif_cross(t_all *all)
+{
+	printf("tes la\n");
+	ft_finish(all);
+	return (0);
 }

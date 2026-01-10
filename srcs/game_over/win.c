@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 13:38:41 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/10 14:27:53 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 20:24:58 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	screen_game_win_v2(t_all *all)
 	print_img(all, all->images.win, all->player_position.y,
 		all->player_position.x);
 	mlx_do_sync(all->window.mlx);
-
 	usleep(2000000);
 	ft_finish(all);
 }

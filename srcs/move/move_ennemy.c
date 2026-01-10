@@ -6,7 +6,7 @@
 /*   By: amkhelif <amkhelif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 12:00:46 by amkhelif          #+#    #+#             */
-/*   Updated: 2026/01/09 19:19:46 by amkhelif         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:57:46 by amkhelif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	timer(t_all *all)
 {
 	static long long	timer = 0;
 
-	if (timer >= 150000)
+	if (timer >= 100000)
 	{
 		position_ennemy(all);
 		timer = 0;
